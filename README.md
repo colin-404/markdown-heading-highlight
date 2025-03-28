@@ -4,11 +4,11 @@
 
 原始效果
 
-![./assets/vscode1.jpg]
+![](./assets/vscode1.jpg)
 
 使用后的效果
 
-![./assets/vscode2.jpg]
+![](./assets/vscode2.jpg)
 
 
 ## 默认颜色
@@ -21,7 +21,7 @@
 ## 自定义颜色
 
 您可以在VSCode设置中自定义每个级别标题的颜色：
-![./assets/vscode3.jpg]
+![](./assets/vscode3.jpg)
 
 
 ## 安装
