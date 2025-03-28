@@ -2,7 +2,7 @@
   "name": "markdown-cool-editor",
   "displayName": "markdown cool editor",
   "description": "Highlights Markdown headings with different colors based on level",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -28,7 +28,7 @@
       "properties": {
         "markdownHeadingHighlighter.h1Color": {
           "type": "string",
-          "default": "#FF2D00",
+          "default": "#FFFDD0",
           "description": "Color for H1 headings (# Heading)"
         },
         "markdownHeadingHighlighter.h2Color": {
@@ -43,7 +43,7 @@
         },
         "markdownHeadingHighlighter.h4Color": {
           "type": "string",
-          "default": "#9900CC",
+          "default": "#B6D0E2",
           "description": "Color for H4 headings (#### Heading)"
         },
         "markdownHeadingHighlighter.h5Color": {

@@ -14,32 +14,32 @@ export function activate(context: vscode.ExtensionContext) {
     const headingDecorators: HeadingDecorator[] = [
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h1Color'), 
-            regex: /^#\s+.*$/gm, 
+            regex: /^#[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h1Color' 
         },
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h2Color'), 
-            regex: /^##\s+.*$/gm, 
+            regex: /^##[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h2Color' 
         },
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h3Color'), 
-            regex: /^###\s+.*$/gm, 
+            regex: /^###[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h3Color' 
         },
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h4Color'), 
-            regex: /^####\s+.*$/gm, 
+            regex: /^####[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h4Color' 
         },
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h5Color'), 
-            regex: /^#####\s+.*$/gm, 
+            regex: /^#####[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h5Color' 
         },
         { 
             decorationType: createDecorator('markdownHeadingHighlighter.h6Color'), 
-            regex: /^######\s+.*$/gm, 
+            regex: /^######[ \t]+.*$/gm, 
             configKey: 'markdownHeadingHighlighter.h6Color' 
         }
     ];
@@ -77,7 +77,15 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.workspace.onDidChangeTextDocument(event => {
             const editor = vscode.window.activeTextEditor;
             if (editor && event.document === editor.document && editor.document.languageId === 'markdown') {
-                updateDecorations(editor, headingDecorators);
+                // 检查更改是否包含回车键
+                const containsNewLine = event.contentChanges.some(change => 
+                    change.text.includes('\n') || change.text.includes('\r\n')
+                );
+                
+                // 只在有回车时或初始加载时更新高亮
+                if (containsNewLine) {
+                    updateDecorations(editor, headingDecorators);
+                }
             }
         })
     );
