@@ -2,7 +2,7 @@
   "name": "markdown-heading-highlight",
   "displayName": "Markdown Heading Highlight",
   "description": "Highlights Markdown headings with different colors based on level",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.96.0"

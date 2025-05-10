@@ -6,7 +6,7 @@ An extension for highlighting Markdown headings in VSCode. Titles of different l
 
 原始效果  Original 
 
-![](./assets/vscode1.jpg)
+![](./assets/vscode001.jpg)
 
 使用后的效果 After use
 
