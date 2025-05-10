@@ -1,29 +1,40 @@
-# Markdown Cool Editor
+# Markdown Heading Highlignt
 
 一个用于在VSCode中高亮显示Markdown标题的扩展。不同级别的标题将使用不同的颜色进行显示。
 
-原始效果
+An extension for highlighting Markdown headings in VSCode. Titles of different levels will be displayed in different colors.
+
+原始效果  Original 
 
 ![](./assets/vscode1.jpg)
 
-使用后的效果
+使用后的效果 After use
 
-![](./assets/vscode2.jpg)
+![](./assets/image2.png)
 
 
-## 默认颜色
-# 
-- H1 (`# 标题`) - 奶油色 (#FFFDD0)
-- H2 (`## 标题`) - 深青色 (#00CED1)
-- H3 (`### 标题`) - 浅蓝色 (#33A8FF)
-- H4 (`#### 标题`) - 粉蓝色 (#B6D0E2)
+## 默认颜色 Default
 
-## 自定义颜色
+- H1 (`# 标题`) - (#79E7A8)
+- H2 (`## 标题`) -  (#00CED1)
+- H3 (`### 标题`) -  (#33A8FF)
+- H4 (`#### 标题`) -  (#B6D0E2)
+
+## 自定义颜色 Custom color
 
 您可以在VSCode设置中自定义每个级别标题的颜色：
-![](./assets/vscode3.jpg)
+![](./assets/image.png)
 
 
-## 安装
+## 安装 install
 
-打开插件市场，搜索"Markdown Cool Editor"，点击安装。
+打开插件市场，搜索"Markdown Heading Highlight"，点击安装。
+
+Open the plugin market, search for "Markdown Heading Highlight", and click to install.
+
+
+# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+
+
